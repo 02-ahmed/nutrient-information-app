@@ -26,7 +26,7 @@ const App = () => {
   useEffect(() => {
     axios.get<Food[]>("https://nutrition-by-api-ninjas.p.rapidapi.com/v1/nutrition", {
       headers: {
-        'x-rapidapi-key':'***REMOVED***',
+        'x-rapidapi-key':'',
         'x-rapidapi-host': 'nutrition-by-api-ninjas.p.rapidapi.com'
       },
       params: {
