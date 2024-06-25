@@ -3,7 +3,8 @@ import axios from 'axios'
 import { useState } from 'react'
 import Search from './components/Search'
 import Nutrients from './components/Nutrients';
-import './App.css'
+import './App.css';
+
 
 interface Food {
   name: string;
@@ -39,11 +40,15 @@ const App = () => {
   return (
     <>
       <div>
-        <h1 className='text-center'>Nutrient Information</h1> 
+        <h1 className='text-center ' >Aduane-Info</h1> 
+        {error && <h1 className='text-danger'>{error}</h1>}
       </div>
       {error && <p className='text-danger'>{error}</p>}
       <Search  handleSearch={(data) => {setQuery(data.search)}}/>
-      <Nutrients foods={foods}/>
+      <div className="mb-2">
+        <Nutrients foods={foods}/>
+      </div>
+      
     </>
   )
 }

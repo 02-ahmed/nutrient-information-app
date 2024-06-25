@@ -29,7 +29,7 @@ const Search = ({ handleSearch}:Props) => {
         <div className='container mb-3 mt-5'>
           <div className='row justify-content-center'>
             <div className="col-md-6">
-            <label htmlFor="search" className='form-label'>Search for any food and receive nutritional values</label>
+            <label htmlFor="search" className='form-label '>Search any food for nutritional values</label>
               <div className="d-flex align-items-center">
                 <input {...register('search')} type="text" id="search" className='form-control'/>
                 <button className='btn btn-primary ms-2' disabled={!isValid}>Search</button>

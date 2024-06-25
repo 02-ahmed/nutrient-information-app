@@ -1,30 +1,32 @@
-# React + TypeScript + Vite
+# ADUANE-INFO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aduane-Info is an app that allows you to search for the nutritional value of any food, fruit, vegetable or beverage.
 
-Currently, two official plugins are available:
+You can combine foods in the search and get results of their nutrtional information
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Aduane-Info](https://aduane-info.netlify.app/) This is a live link to Tasky
 
-## Expanding the ESLint configuration
+# Overview
+- Aduane-Info is a simple app designed to assist you know the nutrional value of whatever you consume.
+- Aduane-Info provides you with main nutrients and their values per mg or g.
+- Search results include Fruits, Vegetables, Drinks and Beverages, Full Meals and many more
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+# Features
+Nutrients Displays:
+- Fat
+- Sodium
+- Cholesterol
+- Sugar
+- Carbohydrates
+- Fiber
+- Potassium
 
-- Configure the top-level `parserOptions` property like this:
+# Screenshots
+![mobile](./screenshots/photo_2024-06-22_19-57-39.jpg)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+![web](./screenshots/Screenshot%202024-06-22%20195706.png)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+
+# Contact
+For any questions or suggestions, please contact me on [Twitter](https://twitter.com/_02ahmed)
