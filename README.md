@@ -2,7 +2,7 @@
 
 Aduane-Info is an app that allows you to search for the nutritional value of any food, fruit, vegetable or beverage.
 
-You can combine foods in the search and get results of their nutrtional information
+You can combine foods in the search and get results of their nutritional information
 
 - [Aduane-Info](https://aduane-info.netlify.app/) This is a live link to Aduane-Info
 
