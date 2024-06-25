@@ -4,7 +4,7 @@ Aduane-Info is an app that allows you to search for the nutritional value of any
 
 You can combine foods in the search and get results of their nutrtional information
 
-- [Aduane-Info](https://aduane-info.netlify.app/) This is a live link to Tasky
+- [Aduane-Info](https://aduane-info.netlify.app/) This is a live link to Aduane-Info
 
 # Overview
 - Aduane-Info is a simple app designed to assist you know the nutrional value of whatever you consume.
