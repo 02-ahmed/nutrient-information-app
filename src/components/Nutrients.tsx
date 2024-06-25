@@ -19,7 +19,7 @@ const Nutrients = ({foods}:Props) => {
   return (
     <>
       <div className="container d-flex justify-content-center align-items-center">
-        <div className="card col-6">
+        <div className="card col-12 col-md-6">
           {foods.map((food, index) => (
               <div key={index} className="card col-md-12 col-12 m-12">
                 <div className="card-header text-center">

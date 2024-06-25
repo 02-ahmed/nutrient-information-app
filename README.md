@@ -12,7 +12,7 @@ You can combine foods in the search and get results of their nutrtional informat
 - Search results include Fruits, Vegetables, Drinks and Beverages, Full Meals and many more
 
 # Features
-Nutrients Displays:
+Nutrients Displayed:
 - Fat
 - Sodium
 - Cholesterol
@@ -22,9 +22,9 @@ Nutrients Displays:
 - Potassium
 
 # Screenshots
-![mobile](./screenshots/photo_2024-06-22_19-57-39.jpg)
+![mobile](./screenshots/photo_2024-06-25_09-56-06.jpg)
 
-![web](./screenshots/Screenshot%202024-06-22%20195706.png)
+![web](./screenshots/Screenshot%202024-06-25%20095914.png)
 
 
 
