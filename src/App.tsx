@@ -22,6 +22,8 @@ const App = () => {
   const [foods, setFoods] = useState<Food[]>([]);
   const [error, setError] = useState('');
   const [query, setQuery] = useState('');
+  const [hasSearched, setHasSearched] = useState(false)
+
 
 
   const API_KEY = import.meta.env.VITE_API_KEY
@@ -38,18 +40,12 @@ const App = () => {
     })
     .then((result) => setFoods(result.data))
     .catch((error) => setError(error.message))
+
   }, [query])
 
   useEffect(() => {
-    console.log(API_KEY)
-  });
-
-  const foodDisplayed:Food[] = foods.length > 0? foods: [{name:"No food found", fat_total_g: 0, sodium_mg:0,
-    cholesterol_mg: 0,
-    sugar_g:0,
-    carbohydrates_total_g:0,
-    fiber_g:0,
-    potassium_mg:0 }]
+    setHasSearched(false)
+  }, [])
 
   return (
     <>
@@ -58,9 +54,10 @@ const App = () => {
         {error && <h1 className='text-danger'>{error}</h1>}
       </div>
       {error && <p className='text-danger'>{error}</p>}
-      <Search  handleSearch={(data) => {setQuery(data.search)}}/>
+      <Search onSearch={() => {setHasSearched(true)}}  handleSearch={(data) => {setQuery(data.search)}}/>
       <div className="mb-2">
-        <Nutrients foods={foodDisplayed}/>
+        {hasSearched && foods.length === 0 ? <h5 className='text-center'>Nothing to show</h5>:""}
+        <Nutrients foods={foods}/>
       </div>
       
     </>

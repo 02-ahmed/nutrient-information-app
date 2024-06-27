@@ -5,6 +5,7 @@ import { useForm} from 'react-hook-form'
 
 interface Props {
   handleSearch: (data:SearchFormData) => void;
+  onSearch: () => void
 };
 
 const schema = z.object({
@@ -13,7 +14,7 @@ const schema = z.object({
 
 type SearchFormData = z.infer<typeof schema>
 
-const Search = ({ handleSearch}:Props) => {
+const Search = ({handleSearch, onSearch}:Props) => {
   const {register, handleSubmit, formState:{errors, isValid}} = useForm<SearchFormData>({resolver:zodResolver(schema)});
 
   return (
@@ -27,7 +28,7 @@ const Search = ({ handleSearch}:Props) => {
             <label htmlFor="search" className='form-label bg-white'>Search any food for nutritional values</label>
               <div className="d-flex align-items-center">
                 <input {...register('search')} type="text" id="search" className='form-control'/>
-                <button className='btn btn-primary ms-2' disabled={!isValid}>Search</button>
+                <button onClick={onSearch} className='btn btn-primary ms-2' disabled={!isValid}>Search</button>
               </div>
               {errors.search && <span className='text-danger bg-white'>Must be 3 characters or more</span>}
             </div>
