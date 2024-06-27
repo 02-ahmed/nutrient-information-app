@@ -4,7 +4,6 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm} from 'react-hook-form'
 
 interface Props {
-  /* query:(e:React.ChangeEvent<HTMLInputElement>) => void; */
   handleSearch: (data:SearchFormData) => void;
 };
 
@@ -17,14 +16,10 @@ type SearchFormData = z.infer<typeof schema>
 const Search = ({ handleSearch}:Props) => {
   const {register, handleSubmit, formState:{errors, isValid}} = useForm<SearchFormData>({resolver:zodResolver(schema)});
 
-  /* const onSubmit = (data: FieldValues) => {
-    console.log(data);
-    handleSearch
-  } */
   return (
     <>
       <form onSubmit={handleSubmit((data) => {
-        handleSearch(data)
+        handleSearch(data);
       })}>
         <div className='container mb-3 mt-5'>
           <div className='row justify-content-center'>

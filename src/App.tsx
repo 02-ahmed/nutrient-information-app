@@ -1,4 +1,4 @@
-import  { useEffect } from 'react'
+import  {  useEffect } from 'react'
 import axios from 'axios'
 import { useState } from 'react'
 import Search from './components/Search'
@@ -21,12 +21,15 @@ interface Food {
 const App = () => {
   const [foods, setFoods] = useState<Food[]>([]);
   const [error, setError] = useState('');
-  const [query, setQuery] = useState('')
+  const [query, setQuery] = useState('');
+
+
+  const API_KEY = import.meta.env.VITE_API_KEY
 
   useEffect(() => {
     axios.get<Food[]>("https://nutrition-by-api-ninjas.p.rapidapi.com/v1/nutrition", {
       headers: {
-        'x-rapidapi-key':'',
+        'x-rapidapi-key': API_KEY,
         'x-rapidapi-host': 'nutrition-by-api-ninjas.p.rapidapi.com'
       },
       params: {
@@ -37,6 +40,17 @@ const App = () => {
     .catch((error) => setError(error.message))
   }, [query])
 
+  useEffect(() => {
+    console.log(API_KEY)
+  });
+
+  const foodDisplayed:Food[] = foods.length > 0? foods: [{name:"No food found", fat_total_g: 0, sodium_mg:0,
+    cholesterol_mg: 0,
+    sugar_g:0,
+    carbohydrates_total_g:0,
+    fiber_g:0,
+    potassium_mg:0 }]
+
   return (
     <>
       <div>
@@ -46,7 +60,7 @@ const App = () => {
       {error && <p className='text-danger'>{error}</p>}
       <Search  handleSearch={(data) => {setQuery(data.search)}}/>
       <div className="mb-2">
-        <Nutrients foods={foods}/>
+        <Nutrients foods={foodDisplayed}/>
       </div>
       
     </>
