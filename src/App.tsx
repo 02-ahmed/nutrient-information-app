@@ -4,7 +4,6 @@ import { useState } from 'react'
 import Search from './components/Search'
 import Nutrients from './components/Nutrients';
 import './App.css';
-import { Controller } from 'react-hook-form';
 
 
 interface Food {
